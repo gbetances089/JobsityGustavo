@@ -14,9 +14,8 @@ public class ContactFormTCs {
 	
 	@Before
 	public void setUp() throws Exception {	
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\padres\\eclipse-workspace\\Auto1\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\padres\\eclipse-workspace\\JobsityGustavo\\chromedriver.exe");
 	chromedriver = new ChromeDriver();
-	
 	chromedriver.get(" http://automationpractice.com/");
 	methods.waitForLoadChrome(chromedriver);
 	}
@@ -28,7 +27,7 @@ public class ContactFormTCs {
 
 	@Test
 	public void testcase03() {
-		
+		//Test case 03//
 		chromedriver.findElement(By.cssSelector("[title='Contact Us']")).click();
 		methods.waitForLoadChrome(chromedriver);
 		
@@ -50,7 +49,7 @@ public class ContactFormTCs {
 	
 	@Test
 	public void testcase04() {
-		
+		//Test case 04//
 		chromedriver.findElement(By.cssSelector("[title='Contact Us']")).click();
 		methods.waitForLoadChrome(chromedriver);
 		
@@ -68,7 +67,7 @@ public class ContactFormTCs {
 	
 	@Test
 	public void testcase05() {
-		
+		//Test case 05//
 		chromedriver.findElement(By.cssSelector("[title='Contact Us']")).click();
 		methods.waitForLoadChrome(chromedriver);
 		
@@ -86,7 +85,7 @@ public class ContactFormTCs {
 	
 	@Test
 	public void testcase06() {
-		
+		//Test case 06//
 		chromedriver.findElement(By.cssSelector("[title='Contact Us']")).click();
 		methods.waitForLoadChrome(chromedriver);
 		
@@ -104,7 +103,7 @@ public class ContactFormTCs {
 	
 	@Test
 	public void testcase07() {
-
+		//Test case 07//
 		chromedriver.findElement(By.cssSelector("[title='Contact Us']")).click();
 		methods.waitForLoadChrome(chromedriver);
 		

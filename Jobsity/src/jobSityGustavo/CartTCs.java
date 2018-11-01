@@ -15,7 +15,7 @@ public class CartTCs {
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\padres\\eclipse-workspace\\Auto1\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\padres\\eclipse-workspace\\JobsityGustavo\\chromedriver.exe");
 		chromedriver = new ChromeDriver();
 		chromedriver.get(" http://automationpractice.com/");
 		methods.waitForLoadChrome(chromedriver);
@@ -27,8 +27,8 @@ public class CartTCs {
 	}
 
 	@Test
-	public void test() {
-		
+	public void testcase08() {
+		//Test case 08//
 		chromedriver.findElement(By.cssSelector("#block_top_menu > ul:nth-child(2) > li:nth-of-type(1) > .sf-with-ul:nth-of-type(1)")).click();
 		methods.waitForLoadChrome(chromedriver);
 		
@@ -73,7 +73,7 @@ public class CartTCs {
 	
 	@Test
 	public void testcase11() {
-		
+		//Test case 11//	
 		chromedriver.findElement(By.cssSelector("#block_top_menu > ul:nth-child(2) > li:nth-of-type(1) > .sf-with-ul:nth-of-type(1)")).click();
 		methods.waitForLoadChrome(chromedriver);
 		

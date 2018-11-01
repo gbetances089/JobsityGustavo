@@ -15,7 +15,7 @@ public class HeaderCartCheckOut {
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\padres\\eclipse-workspace\\Auto1\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\padres\\eclipse-workspace\\JobsityGustavo\\chromedriver.exe");
 		chromedriver = new ChromeDriver();
 		chromedriver.get(" http://automationpractice.com/");
 		methods.waitForLoadChrome(chromedriver);
@@ -24,12 +24,12 @@ public class HeaderCartCheckOut {
 
 	@After
 	public void tearDown() throws Exception {
-		//chromedriver.close();
+		chromedriver.close();
 	}
 
 	@Test
-	public void test() {
-		
+	public void testcase12() {
+		//Test case 12//
 		chromedriver.findElement(By.cssSelector("#block_top_menu > ul:nth-child(2) > li:nth-of-type(1) > .sf-with-ul:nth-of-type(1)")).click();
 		methods.waitForLoadChrome(chromedriver);
 		
@@ -45,5 +45,6 @@ public class HeaderCartCheckOut {
 		
 		chromedriver.findElement(By.cssSelector("[title='Check out'] span")).click();
 		
+		methods.checkOutPage(chromedriver);
 	}
 }

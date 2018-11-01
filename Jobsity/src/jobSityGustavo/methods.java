@@ -12,10 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class methods {
 	
-	static int cont = 0;
-
-	
+	static int cont = 0;	
 	public static void waitForLoadChrome(WebDriver Chomedriver) {
+		//To wait that the page is loaded//
         ExpectedCondition<Boolean> pageLoadCondition = new
                 ExpectedCondition<Boolean>() {
                     public Boolean apply(WebDriver Chromedriver) {
@@ -26,10 +25,8 @@ public class methods {
         wait.until(pageLoadCondition);
     }
 
-
-
 	public static void validateAlertMessage(WebDriver chromedriver) {
-		// TODO Auto-generated method stub
+		//Validate the alert message on the message page.
 		Boolean ElementisPresent = chromedriver.findElements(By.cssSelector(".alert-danger p")).size()!= 0 ;
 		if (ElementisPresent == true)
 			return;		
@@ -39,9 +36,8 @@ public class methods {
 		}
 	}
 
-
-
 	public static void validateDelete(WebDriver chromedriver) {
+		//Validate that the cart is deleted after item is deleted
 		chromedriver.findElement(By.cssSelector("[title='View my shopping cart']")).click();
 		Boolean Visible = chromedriver.findElement(By.cssSelector(".alert-warning")).isDisplayed();
 		if (Visible = true) {
@@ -50,12 +46,11 @@ public class methods {
 			
 			fail("The item was not deleted from the cart.");
 
-		}
-		
-		
+		}		
 	}
 
 	public static void cartQuantity(WebDriver chromedriver) {
+		//Validate that items are been added to the cart
 		String quant = chromedriver.findElement(By.className("ajax_cart_quantity")).getText();
 		int quantity = Integer.parseInt(quant); 
 		cont ++;	
@@ -69,14 +64,21 @@ public class methods {
 		
 	}
 
-
 	public static void hoverOverCart(WebDriver chromedriver) {
-		// TODO Auto-generated method stub
-		
+		//To hover ober the cart in the header		
 		Actions action  = new Actions(chromedriver); 
 		WebElement CartHeader = chromedriver.findElement(By.cssSelector("[title='View my shopping cart']"));
 		action.moveToElement(CartHeader).build().perform();
 	}
-		
+
+	public static void checkOutPage(WebDriver chromedriver) {
+		//Validate that item is in the cart.
+		Boolean isPresent = chromedriver.findElements(By.className("cart_product")).size() > 0;
+		if(isPresent = true) {
+			return;}
+			else {
+			fail("The item was not added to the cart.");
+			}
+	}		
 }
 		
